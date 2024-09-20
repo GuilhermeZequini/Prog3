@@ -15,7 +15,7 @@ class Animal {
 		return 10.0f;
 	}
 	public void exibirInformacoes (){
-		System.out.printf("Sexo: %s peso: %.2f  idade : %d  id: %d ",sexo, peso, idade, id);
+		System.out.printf("Sexo: %s peso: %.2f  idade : %d  id: %d \n",sexo, peso, idade, id);
 		
 	}
 
