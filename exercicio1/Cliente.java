@@ -57,8 +57,6 @@ class Cliente {
     }
 
 
-
-
     public void ImprimirExtrato(){
         System.out.println("Número da Conta: " + getNumeroConta());
         System.out.println("Agência: " + getAgencia());
