@@ -20,8 +20,6 @@ class PessoaFisica extends Cliente {
 	public void imprimirExtrato() {
 		System.out.println("Nome: " + nome);
 		System.out.println("CPF: " + cpf);
-		System.out.println("Agencia: " + getAgencia());
-		System.out.println("Numero da Conta: " + getNumeroConta());
-		System.out.println("Saldo: " + getSaldo());
+		imprimirConta();
 	}
 }

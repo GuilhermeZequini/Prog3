@@ -56,4 +56,10 @@ abstract class Cliente {
 	}
 
 	abstract public void imprimirExtrato();
+
+	public void imprimir(){
+		System.out.println("Agencia: " + getAgencia());
+		System.out.println("Numero da Conta: " + getNumeroConta());
+		System.out.println("Saldo: " + getSaldo());
+	}
 }
