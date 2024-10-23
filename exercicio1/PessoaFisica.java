@@ -4,7 +4,7 @@ public class PessoaFisica extends Cliente { // Usando extends para herdar de Cla
     private String Nome;
 
     public PessoaFisica (int NumeroConta ,String Agencia ,int CPF , String Nome){
-        super(NumeroConta ,Agencia ,Limite);
+        super(NumeroConta ,Agencia ,limite);
     }
 
     public int getCFP(){
