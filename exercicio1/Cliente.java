@@ -1,68 +1,76 @@
 class Cliente {
-    private int NumeroConta;
-    private String Agencia;
-    private float Saldo;
-    private float Limite;
+    private int numeroConta;
+    private String agencia;
+    private float saldo;
+    private float limite;
 
-    public Cliente (int NumeroConta ,String Agencia ,float Limite){
-        this.NumeroConta = NumeroConta;
-        this.Agencia = Agencia;
-        this.Limite = Limite;   
+    Cliente(int numeroConta, String agencia, float limite){
+        this.numeroConta = numeroConta;
+        this.agencia = agencia;
+        this.limite = limite;
+        saldo = 0.0f;
     }
 
-    public int getNumeroConta (){
-        return NumeroConta;
+    
+	public int getNumeroConta() {
+		return (numeroConta);
+	}
+
+	public String getAgencia() {
+		return (agencia);
+	}
+
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+
+	public float getSaldo() {
+		return (saldo);
+	}
+
+	public float getLimite() {
+		return (limite);
+	}
+
+	public void setLimite(float valor) {
+		limite = valor;
+	}
+
+	public float sacar(float valor) {
+		if (saldo + limite >= valor) {
+			saldo = saldo - valor;
+			return (valor);
+		}
+		return (0.0f);
+	}
+
+	public void depositar(float valor) {
+		saldo = saldo + valor;
+	}
+
+	public boolean transferir(Cliente cliente, float valor) {
+		if (sacar(valor) > 0.0f) {
+			cliente.depositar(valor);
+			return (true);
+		}
+		return (false);
+	}
+
+    public void imprimirExtrato(){
+        System.out.println("Agencia: " + agencia);
+	    System.out.println("Numero da Conta: " + numeroConta);
+		System.out.println("Saldo: " + saldo);
+        System.out.println("Limite: " + limite);
+        System.out.println();
     }
-
-    public String getAgencia(){
-        return Agencia;
-    }
-
-    public void setAgencia (String getAgencia){
-        this.Agencia = Agencia;
-    }
-
-    public float getSaldo(){
-        return Saldo;
-    }
-
-    public float getLimite (){
-        return Limite;
-    }
-
-    public void setLimite(float valor){}
-
-    public float Sacar(float valor){
-        if(Saldo >= valor) {
-        Saldo -= valor;
-        return valor;
-        } 
-        else {
-        return 0; // ou lançar uma exceção ou indicar que o saque foi mal-sucedido
-        }
-    }
-
-    public void Depositar(float valor){
-        Saldo += valor;
-    }
-
-    public boolean Transferir( Cliente cliente , float valor){
-        if(this.Saldo >= valor){
-        this.Saldo -= valor;
-        cliente.Depositar(valor); // ou cliente.Saldo += valor;
-        return true;
-    } else {
-        return false;
-    }
-    }
-
-
-    public void ImprimirExtrato(){
-        System.out.println("Número da Conta: " + getNumeroConta());
-        System.out.println("Agência: " + getAgencia());
-        System.out.println("Saldo: " + getSaldo());
-        System.out.println("Limite: " + getLimite());
-    }
-
-
 }
+
+
+
+
+
+
+
+
+
+

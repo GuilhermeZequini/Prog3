@@ -1,21 +1,27 @@
 class Main{
 	public static void main (String [] args){
-        // Criando dois clientes
-        Cliente cliente1 = new Cliente(12345, "Agência 001", 5000);
-        Cliente cliente2 = new Cliente(67890, "Agência 002", 3000);
+          System.out.println("Olá mundo");
 
-        cliente1.Depositar(5000);
-
-        cliente1.Sacar(0);
-
-        cliente1.Transferir(cliente2, 300);
-
-        cliente1.ImprimirExtrato();
-
-        System.out.println();
-
-        cliente2.ImprimirExtrato();
         
+        // Criando dois clientes
+        PessoaFisica cliente1 = new PessoaFisica(12345, "Agência 001", 123456 ,"Guilherme");
+        PessoaJuridica cliente2 = new PessoaJuridica(67890, "Agência 002",12536 , "COOP", "IE" );
+
+        cliente1.imprimirExtrato();
+        cliente2.imprimirExtrato();
+
+        cliente1.depositar(50000);
+        cliente1.imprimirExtrato();
+
+        cliente1.transferir(cliente2 ,10000);
+        cliente1.imprimirExtrato();
+        cliente2.imprimirExtrato();
+
+        cliente1.sacar(10000);
+        cliente1.imprimirExtrato();
+  
+
+
         
     }
 }

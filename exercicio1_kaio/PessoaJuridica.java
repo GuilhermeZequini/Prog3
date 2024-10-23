@@ -31,6 +31,8 @@ class PessoaJuridica extends Cliente {
 		System.out.println("Razao Social: " + razaoSocial);
 		System.out.println("CNPJ: " + cnpj);
 		System.out.println("Natureza Juridica: " + naturezaJuridica);
-		imprimirConta();
+		System.out.println("Agencia: " + getAgencia());
+		System.out.println("Numero da Conta: " + getNumeroConta());
+		System.out.println("Saldo: " + getSaldo());
 	}
 }
