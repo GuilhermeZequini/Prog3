@@ -10,6 +10,7 @@ class Pessoa{
 
     public PEssoa (String nome){
         this.nome = nome ; 
+        email = "sem_email@gmail.com";
         
     }
 
