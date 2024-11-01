@@ -8,11 +8,18 @@ class Pessoa{
         this.email = email;
     }
 
-    public PEssoa (String nome){
+    public Pessoa (String nome){
         this.nome = nome ; 
         email = "sem_email@gmail.com";
         
     }
 
+    public String getNome(){
+        return (nome);
+    }
+
+    public String  getEmail (){
+        return (email);
+    }
 
 }

@@ -4,13 +4,13 @@ public class Pessoa {
 
     public Pessoa(){
         this.idade = 45;
-        this.nome = "Neymarson"
+        this.nome = "Neymarson";
     }
 
 
     public Pessoa ( int idade , String nome){
         this.idade = idade;
-        this.nome = nome
+        this.nome = nome;
     }
 
     public String getNome(){
