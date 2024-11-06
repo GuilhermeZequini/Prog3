@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 import java.time.LocalDate;
 
-class Usuario extends Pessoa {
+public class Usuario extends Pessoa {
 	private int id;
 	private LocalDate dataCadastro;
 

@@ -4,8 +4,6 @@ class Usuario extends Pessoa{
     private int id;
     private LocalDate dataCadastro;
 
-
-
     public Usuario(String nome, String email , int id , LocalDate dataCadastro ){
         super(nome , email);
         this.id = id;
