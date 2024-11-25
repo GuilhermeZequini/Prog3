@@ -17,5 +17,9 @@ abstract class FiguraGeometrica2D implements IArimeticaGeometrica2D  {
         pontos.remove(pontos);
     }
 
+    public List<Ponto2D> getPontos() {
+        return pontos;
+    }
+
 }
 
