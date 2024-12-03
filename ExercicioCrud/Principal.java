@@ -12,7 +12,67 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 class Principal {
-	public static void main(String[] args) throws UnsupportedEncodingException {
+	public static void main(String[] args) {
+		int opcao
+		
+		do {
+			opcao = exibirMenu();
+			processar(opcao);
+	}
+	 while (opcao)
+
+
+
+	 private static int exibirMenu(){
+		String mensagem = "Sistema de Gestão de Produtos";
+		mensagem += "1 - Cadastrar\n";
+		mensagem += "2 - Atualizar\n";
+		mensagem += "3 - Remover\n";
+		mensagem += "4 - Listar\n";
+		mensagem += "5 - Sair\n";
+		
+		return (integer.parseInt(JOptionPane.showMessageMenssage(null , mensagem , ));
+	 }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		List<Produto> produtos = listarDados();
 
 		String todosProdutos = "";
